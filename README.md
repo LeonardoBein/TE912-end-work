@@ -23,30 +23,39 @@ Universidade Federal do Paraná (UFPR)
   - [Afinal, o que é Deep Learning?](https://gaea.com.br/afinal-o-que-e-deep-learning/)
 
 ### 2) Why do we prefer CNNs over shallow artificial neural networks for image data?
-  The CNN (Convolution Neural Networks) it's better because the convolutional layers can take advantage of inhererent properties of images, based on two steps: convolutions and pooling layers.
-  Convolutions 
-  
-Convolutions
-Simple feedforward neural networks don’t see any order in their inputs. If you shuffled all your images in the same way, the neural network would have the very same performance it had when trained on not shuffled images.
-CNN, in opposition, take advantage of local spatial coherence of images. This means that they are able to reduce dramatically the number of operation needed to process an image by using convolution on patches of adjacent pixels, because adjacent pixels together are meaningful. We also call that local connectivity. Each map is then filled with the result of the convolution of a small patch of pixels, slid with a window over the whole image.
+   The definition of convolutional neural network (CNN) is a type of artificial neural network usually used in image recognition and processing that use deep learning to perform both generative and descriptive tasks. That's the reason why it's better, the convolutional layers can take advantage of inhererent properties of images, based on two steps: convolutions and pooling layers.
+  Convolutions it's the step where feedfoward network it doesn't differentiate the input order, shuffling the all images, the neural network can have the smae performance compared to a not shuffled image. Basically, it's possible to reduce the number of operation required leading to the second step: pooling layers.
+  By the poooling layers it's possible to downscale the image, retaining throughout the network, maintaining the coherence between an input and the one next to it, when it's compared to on classic inputs.
 
-Pooling layers
-There are also the pooling layers, which downscale the image. This is possible because we retain throughout the network, features that are organized spatially like an image, and thus downscaling them makes sense as reducing the size of the image. On classic inputs you cannot downscale a vector, as there is no coherence between an input and the one next to it.
-
-Update 2021: In modern CNN architectures, pooling layers are replaced by strided convolutions.
-  
+**References**
+-[Why are convolutional neural networks better than other neural networks in processing data such as images and video?](https://www.quora.com/Why-are-convolutional-neural-networks-better-than-other-neural-networks-in-processing-data-such-as-images-and-video)
+-[Convolutional Neural Network](https://www.techtarget.com/searchenterpriseai/definition/convolutional-neural-network)  
 
 ### 3) Explain the role of the convolution layer in a CNN design.
+The main role for convolutional layer it's to build block of convolution neural networks, where contains filters or parameters to be learned. When the filter application are repeated for an input results in the featured map, it can be possible to see the locations and streghth for a detected feature in an input. It's possible to obtain a vector representation of some object of the found net, summarizing, the convolution layers can build features from raw data. 
 
-Text Text Text
+**Refrences**
+-[Training Convolutional Nets to Detect Calcified Plaque in IVUS Sequences](https://www.sciencedirect.com/topics/engineering/convolutional-layer#:~:text=A%20convolutional%20layer%20is%20the,and%20creates%20an%20activation%20map.)
+-[How Do Convolutional Layers Work in Deep Learning Neural Networks?](https://machinelearningmastery.com/convolutional-layers-for-deep-learning-neural-networks/)
 
 ### 4) What is the role of the fully connected (FC) layer in CNN?
+Fully connected layers is defined by the last few layers in the network or the feed foward neural networks. It's the output from the final pooling or convolutional layer, in which is flatter and fed into the connected layer. It's resulted an flattened vector connected to a fully conected layers in which can perform mathematical operation the same as artificial neural networks. The final layers is used for the activation function where it get probabilities of the input used in a speficic class.
 
+**References**
+-[Convolutional Neural Network](https://towardsdatascience.com/convolutional-neural-network-17fb77e76c05#:~:text=Fully%20Connected%20Layer,-Fig%204.&text=Fully%20Connected%20Layer%20is%20simply,into%20the%20fully%20connected%20layer.)
 
 ### 5) Why do we use a pooling layer in a CNN? 
+Pooling layers is used because it's possible to reduce the dimension of the featured maps, reducing the numbers of parameters to learn and computation performance in the network.
+Another reason it's because the feature map can be generated by convolution layer. It's a robust model where the position of the features in the input ins't necessary to have positioned features genereated.
 
-Text Text Text
+**References**
+-[CNN | Introduction to Pooling Layer](https://www.geeksforgeeks.org/cnn-introduction-to-pooling-layer/#:~:text=Why%20to%20use%20Pooling%20Layers,generated%20by%20a%20convolution%20layer.)
 
 ### 6) Explain the characteristics of the following pooling approaches: max pooling, average pooling, and sum pooling
+Knowing that pooling layers is a convolutional neural network that learned filters to input images to create feature maps we can define:
+-Max pooling: it's a fucntion thagt calculates the maximum value for each patch of the feature map.
+-Average poooling: it's a function that calculate the average value for teh featured map.
+-Sum pooling:
 
-Text Text Text
+**References**
+-[A Gentle Introduction to Pooling Layers for Convolutional Neural Networks](https://machinelearningmastery.com/pooling-layers-for-convolutional-neural-networks/)
