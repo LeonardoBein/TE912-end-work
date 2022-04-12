@@ -1,7 +1,7 @@
 import argparse
 from model_train.model_train import train_model
 from models import Models
-import graph
+import make_graphs
 from os import system
 
 def main (model_number: int, train_value: bool = False, compare_models: bool = False):
@@ -18,11 +18,11 @@ def main (model_number: int, train_value: bool = False, compare_models: bool = F
         train_model(modelTrain.value, model_number)
     else:
         if compare_models:
-            graph.compare_models()
+            make_graphs.compare_models()
         else:
             # ler o arquivo treinado
             # plot acuracia do modelo
-            graph.accuracy_model(model_number)
+            make_graphs.accuracy_model(model_number)
     
 if __name__ == '__main__':
     system('clear')

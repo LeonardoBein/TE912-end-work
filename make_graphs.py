@@ -23,10 +23,19 @@ def accuracy_model (model_number):
     df.drop(columns=['Unnamed: 0'], inplace=True)
 
     epochs = range(len(df['accuracy']))
-    plt.plot(epochs, df['accuracy'], 'bo', label='Training accuracy')
-    plt.plot(epochs, df['val_accuracy'], 'red', label='Validation accuracy')
-    plt.title('Model' + ': {}'.format(model_number) + ' - Accuracy: {:.3f}'.format(score[1]))
-    plt.legend()
+    _, ax = plt.subplots(2, 1)
+    
+    ax[0].plot(epochs, df['accuracy'], 'bo', label='Training accuracy')
+    ax[0].plot(epochs, df['val_accuracy'], 'red', label='Validation accuracy')
+    ax[0].title.set_text('Model' + ': {}'.format(model_number) + ' - Accuracy: {:.3f}'.format(score[1]))
+    ax[0].legend()
+
+    ax[1].plot(epochs, df['loss'], 'bo', label='Training loss')
+    ax[1].plot(epochs, df['val_loss'], 'red', label='Validation loss')
+    #ax[1].title.set_text('Model' + ': {}'.format(model_number) + ' - Accuracy: {:.3f}'.format(score[1]))
+    ax[1].legend()
+
+    plt.tight_layout()
     plt.show()
 
     # some correct number images
@@ -36,11 +45,13 @@ def accuracy_model (model_number):
     correct = np.where(predicted_classes == test_y)[0]
     
     print("Found %d correct labels" % len(correct))
+    correct_print = len(correct)
     for i, correct in enumerate(correct[:9]):
         plt.subplot(3,3,i+1)
         plt.imshow(x_test[correct].reshape(28,28), cmap='gray', interpolation='none')
         plt.title("Predicted {}, Correct {}".format(predicted_classes[correct], test_y[correct]))
         plt.tight_layout()
+    plt.suptitle("Found " + str(correct_print) + " correct labels")
     plt.show()
 
     # some incorrect numbers images
@@ -50,11 +61,14 @@ def accuracy_model (model_number):
     correct = np.where(predicted_classes != test_y)[0]
     
     print("Found %d incorrect labels" % len(correct))
+    incorrect_print = len(correct)
     for i, correct in enumerate(correct[:9]):
         plt.subplot(3,3,i+1)
         plt.imshow(x_test[correct].reshape(28,28), cmap='gray', interpolation='none')
         plt.title("Predicted {}, Correct {}".format(predicted_classes[correct], test_y[correct]))
         plt.tight_layout()
+
+    plt.suptitle("Found " + str(incorrect_print) + " incorrect labels")
     plt.show()
 
 def compare_models():
@@ -66,6 +80,7 @@ def compare_models():
     list_models = list()
     for list_model_name in list_models_name:
         #path = os.getcwd() + 
-        model = load_model(os.get)
+        print(list_model_name)
+        model = load_model(os.getcwd() + list_model_name)
         list_models.append(model)
 
