@@ -1,13 +1,30 @@
 # Relatório
-Esse header será destinado à escrever uma mini relatório descrevendo nosso aprendizado / resultados
+Inserir aqui um descritivo básico ... 
 
-@NataliaChoma
-@LeonardoBein
+# How to run? 
+Descrever como rodar o código =)
 
-OBS: O melhor modelo é o 3 -> **VGGNet**. Acertou 9946 imagens e errou 54 imagens 
+## Models
+ - Model 1: LeNet
+ - Model 2: AlexNet
+ - Model 3: VGGNet
+ - Model 4: Generic Setup
+ - Model 5: Generic Setup
+
+## MNIST Number
+
+The model with most accuracy is Model XXX with XXX correct labels and XXX incorrect labels
+
+Inserir abaixo as figuras.
+Inserir o descritivo nas imagens também
+
+## MNIST Fashion
+
+The model with most accuracy is Model XXX with XXX correct labels and XXX incorrect labels
+
+Inserir abaixo as figuras abaixo
 
 
-o diretório "images" contém 3 imagens / modelo 
 
 Exemplo de descritivo de imagens: 
     Modelo 3:
@@ -18,25 +35,3 @@ Exemplo de descritivo de imagens:
 
         Figure_9.jpg: Amostras de iamgens que modelo errou
 
-IMPORTANTE! 
-
-    Modelo 1: Imagens 1 - 3
-    Modelo 2: Imagens 4 - 6
-    Modelo 3: Imagens 7 - 9
-    Modelo 4: Imagens 10 - 12
-    Modelo 5: Imagens 12 - 15
-
-
-
-# How to run? 
-
-Descrever como rodar o código =)
-
-
-# Uma tarefa interessante de se fazer ...
-
-O @LeonardoBein escreveu alguns números em uma folha de papel, podemos verificar se o modelo 3 consegue acertar os números que foram escritos ... 
-
-Steps:
-1. Normalizar as fotos do leo -> colocar no mesmo formato do banco de dados. 28x28, fundo preto ou cinza ......
-2. Modificar algumas partes do script
