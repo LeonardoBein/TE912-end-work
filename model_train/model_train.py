@@ -31,7 +31,11 @@ def train_model(model_template: CNNModelAbstract, model_number: int):
 
     # the data, split between train and test sets
     # 60000 images for train and 10000 images for test
+    
+    # Dataset: MNIST
     (x_train, y_train), (x_test, y_test) = keras.datasets.mnist.load_data()
+    # Dataset: MNIST-like fashion product database
+    # (x_train, y_train), (x_test, y_test) = keras.datasets.fashion_mnist.load_data()
 
     # Scale images to the [0, 1] range
     x_train = x_train.astype("float32") / 255

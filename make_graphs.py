@@ -6,7 +6,13 @@ import tensorflow as tf
 import numpy as np
 
 num_classes = 10
+
+# Dataset: MNIST
 _, (x_test, y_test) = tf.keras.datasets.mnist.load_data()
+
+# Dataset: MNIST-like fashion product database
+# _, (x_test, y_test) = tf.keras.datasets.fashion_mnist.load_data()
+
 x_test = x_test.astype("float32") / 255
 x_test = np.expand_dims(x_test, -1)
 y_test = tf.keras.utils.to_categorical(y_test, num_classes)
