@@ -31,11 +31,11 @@ The model with most accuracy is Model 3 with 9946 correct labels and 54 incorrec
 
 ![graph result best model](../images/mnist/image_3.png)
 
+This graph demonstrates the model's learning process over time, symbolized by learning epochs. The synchronization between the training and validation lines, even though the validation loss and the precision line are not linear, demonstrates that the model is not overfitting (validation loss is decreasing and not increasing, and there is not much gap between the training and validation accuracy).
+
 ![graph result best model](../images/mnist/image_correct_3.png)
 
 ![graph result best model](../images/mnist/image_incorrect_3.png)
-
-Inserir o descritivo nas imagens também
 
 ## MNIST Fashion
 
@@ -64,15 +64,3 @@ The model with most accuracy is Model 5 with 9161 correct labels and 839 incorre
 ![graph result best model](../images/fashion_mnist/image_correct_5.png)
 
 ![graph result best model](../images/fashion_mnist/image_incorrect_5.png)
-
-
-
-Exemplo de descritivo de imagens: 
-    Modelo 3:
-        
-        Figure_7.jpg: Gráficos para verificar se há overfitting. "Por exemplo, a medida que o modelo aprende com os dados, mas a taxa de erro aumenta e o sinal de aprendizagem fica constante significa que aconteceu overfitting. (Verificar Figure_4.png)
-
-        Figure_8.jpg: Amostras de imagens que o modelo acertou
-
-        Figure_9.jpg: Amostras de iamgens que modelo errou
-
