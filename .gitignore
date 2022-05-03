@@ -7,3 +7,4 @@ env/
 data/
 *.h5
 *.csv
+*.xlsx
